@@ -6,8 +6,6 @@ no keywords no fixed menu just vibes lmao 🌈🦄🍄
 
 runs 24/7 on firebase 🔥 so ur pc can be off 😴💤 costs like 0 dollars 🆓 and updates within a minute ⚡
 
-runs 24/7 on firebase 🔥 so ur pc can be off 😴💤 costs like 0 dollars 🆓 and updates within a minute ⚡
-
 still in the planning stage btw 🚧👷 the actual plan is in [PLAN.md](PLAN.md) 📜🤓
 
 ## how it works 🛠️🐒
