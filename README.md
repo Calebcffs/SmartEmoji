@@ -1,51 +1,55 @@
-# SmartEmoji
+# smartemoji 🤖✨🫠
 
-Sync your Google Calendar to your Telegram emoji status, using a local LLM to pick the emoji and Telegram's community custom-emoji library to find a matching one.
+ok so basically 👉 ur google calendar 📅 tells a tiny lil robot brain 🧠🤏 what ur doing and then it goes digging thru the entire telegram community emoji dumpster 🗑️🔍 and slaps something random on ur emoji status 💅🎲 so everyone knows ur in a lecture 📚😴 or at the gym 🏋️💦 or crying about contract law ⚖️😭
 
-> Status: planning. See [PLAN.md](PLAN.md) for the build plan.
+no keywords no fixed menu just vibes 🌈🦄🍄
 
-## How it works
+still in the planning stage btw 🚧👷 the actual plan is in [PLAN.md](PLAN.md) 📜🤓
+
+## how it works 🛠️🐒
 
 ```
-Google Calendar (secret iCal URL)
-        │  every 5 min
+google calendar 📅 (secret ical link 🤫)
+        │  every 5 min ⏰
         ▼
-  Current event? ──no──► clear status (or let it expire)
-        │ yes
+  r u doing something rn 🤔 ──nah──► do nothing 😴 status expires by itself
+        │ ye
         ▼
-  Cache hit for this event? ──yes──► reuse chosen emoji
-        │ no
+  already picked one for this event 🧐 ──ye──► keep it 👍
+        │ nah
         ▼
-  Local LLM (Ollama) → one standard Unicode emoji, e.g. ⚖️
+  local llm 🦙 (ollama) picks one normal emoji like ⚖️
         │
         ▼
-  Telegram: messages.SearchCustomEmojiRequest("⚖️")
-        │  → list of community custom-emoji IDs
+  ask telegram for every community emoji tagged ⚖️ 📡
+        │  → a big pile of custom emoji ids 🗻
         ▼
-  Pick one at random (seeded by event ID)
-        │  (fallback: plain Unicode emoji)
+  pick one at random 🎰 (same event always gets the same one so it doesnt flicker 🪩)
+        │  (if nothing found just use the plain emoji 🤷)
         ▼
-  account.UpdateEmojiStatusRequest(emoji_id, until=event_end)
+  set it as ur status until the event ends ⏳ then it vanishes 👻
 ```
 
-## Stack
+## what its built with 🧱🔩
 
-| Piece | Choice |
+| thing 🧩 | what 🍕 |
 |---|---|
-| Language | Python 3.11+ |
-| Calendar | Google Calendar secret iCal URL (`icalendar` + `recurring_ical_events`), no OAuth |
-| LLM | [Ollama](https://ollama.com) running `qwen2.5:3b` locally, JSON-constrained output |
-| Telegram | [Telethon](https://docs.telethon.dev) userbot on your own account (Premium required for custom emoji status) |
-| Scheduler | Windows Task Scheduler, every 5 min |
-| Cache | Local JSON or SQLite file |
+| language 🐍 | python 3.11 or newer |
+| calendar 📅 | google calendar secret ical link with `icalendar` and `recurring_ical_events` so no oauth pain 🙅‍♂️🔐 |
+| brain 🧠 | [ollama](https://ollama.com) running `qwen2.5:3b` on ur own pc 🖥️🔥 |
+| telegram 📨 | [telethon](https://docs.telethon.dev) logged in as u 🕵️ (premium needed for custom emoji status 💎) |
+| alarm clock ⏰ | windows task scheduler every 5 min 🪟 |
+| memory 🐘 | a lil json or sqlite file 🗃️ |
 
-## Requirements
+## stuff u need 🛒🧺
 
-- Telegram Premium
-- `api_id` / `api_hash` from https://my.telegram.org
-- Google Calendar "Secret address in iCal format"
-- Ollama installed with ~4 GB free RAM
+- telegram premium 💎💸
+- `api_id` and `api_hash` from https://my.telegram.org 🔑🗝️
+- ur google calendar secret address in ical format 🤫📅
+- ollama installed and like 4 gb of free ram 🐏🐏🐏🐏
 
-## Security
+## pls read this one 🚨🚨🚨
 
-The Telethon `.session` file gives **full access to your Telegram account**. Never commit it. The same goes for `.env` (API keys, iCal URL).
+the telethon `.session` file is literally a key to ur whole telegram account 🔓😱 if u commit it anyone can log in as u and post cringe 💀🤡 never ever push it and same goes for `.env` 🙈🙉🙊
+
+ok bye 👋🐸🌮
