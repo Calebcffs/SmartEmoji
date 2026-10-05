@@ -1,8 +1,8 @@
 # smartemoji 🤖✨🫠
 
-ok so basically 👉 ur google calendar 📅 tells a tiny lil robot brain 🧠🤏 what ur doing and then it goes digging thru the entire telegram community emoji dumpster 🗑️🔍 and slaps something random on ur emoji status 💅🎲 so everyone knows ur in a lecture 📚😴 or at the gym 🏋️💦 or crying about contract law ⚖️😭
+ok so basically 👉 ur google calendar 📅 tells a tiny lil robot brain 🧠🤏 what ur doing and then it goes digging thru the entire telegram community emoji dumpster 🗑️🔍 and slaps something random on ur emoji status 💅🎲 so everyone knows ur in a lecture 📚😴 or at the gym 🏋️💦 or crying about ur studies ⚖️😭
 
-no keywords no fixed menu just vibes 🌈🦄🍄
+no keywords no fixed menu just vibes lmao 🌈🦄🍄
 
 still in the planning stage btw 🚧👷 the actual plan is in [PLAN.md](PLAN.md) 📜🤓
 
